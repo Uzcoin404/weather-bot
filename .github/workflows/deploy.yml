@@ -16,7 +16,7 @@ jobs:
     - name: Deploy via rsync over SSH
       uses: burnett01/rsync-deployments@5.2
       with:
-        switches: -avz --delete
+        switches: -avz --delete --no-times
         path: ./
         remote_path: /home/weather-bot/htdocs/weather-bot.suyunbek.uz
         remote_host: ${{ secrets.SERVER_IP }}
